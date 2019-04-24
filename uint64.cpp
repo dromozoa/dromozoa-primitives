@@ -43,63 +43,63 @@ namespace dromozoa {
     }
 
     void impl_add(lua_State* L) {
-      uint64_t u = check_uint64(L, 1);
-      uint64_t v = check_uint64(L, 2);
-      new_uint64(L, u + v);
+      uint64_t self = check_uint64(L, 1);
+      uint64_t that = check_uint64(L, 2);
+      new_uint64(L, self + that);
     }
 
     void impl_sub(lua_State* L) {
-      uint64_t u = check_uint64(L, 1);
-      uint64_t v = check_uint64(L, 2);
-      new_uint64(L, u - v);
+      uint64_t self = check_uint64(L, 1);
+      uint64_t that = check_uint64(L, 2);
+      new_uint64(L, self - that);
     }
 
     void impl_mul(lua_State* L) {
-      uint64_t u = check_uint64(L, 1);
-      uint64_t v = check_uint64(L, 2);
-      new_uint64(L, u * v);
+      uint64_t self = check_uint64(L, 1);
+      uint64_t that = check_uint64(L, 2);
+      new_uint64(L, self * that);
     }
 
     void impl_div(lua_State* L) {
-      uint64_t u = check_uint64(L, 1);
-      uint64_t v = check_uint64(L, 2);
-      new_uint64(L, u / v);
+      uint64_t self = check_uint64(L, 1);
+      uint64_t that = check_uint64(L, 2);
+      new_uint64(L, self / that);
     }
 
     void impl_mod(lua_State* L) {
-      uint64_t u = check_uint64(L, 1);
-      uint64_t v = check_uint64(L, 2);
-      new_uint64(L, u % v);
+      uint64_t self = check_uint64(L, 1);
+      uint64_t that = check_uint64(L, 2);
+      new_uint64(L, self % that);
     }
 
     void impl_eq(lua_State* L) {
-      uint64_t u = check_uint64(L, 1);
-      uint64_t v = check_uint64(L, 2);
-      luaX_push(L, u == v);
+      uint64_t self = check_uint64(L, 1);
+      uint64_t that = check_uint64(L, 2);
+      luaX_push(L, self == that);
     }
 
     void impl_lt(lua_State* L) {
-      uint64_t u = check_uint64(L, 1);
-      uint64_t v = check_uint64(L, 2);
-      luaX_push(L, u < v);
+      uint64_t self = check_uint64(L, 1);
+      uint64_t that = check_uint64(L, 2);
+      luaX_push(L, self < that);
     }
 
     void impl_le(lua_State* L) {
-      uint64_t u = check_uint64(L, 1);
-      uint64_t v = check_uint64(L, 2);
-      luaX_push(L, u <= v);
+      uint64_t self = check_uint64(L, 1);
+      uint64_t that = check_uint64(L, 2);
+      luaX_push(L, self <= that);
     }
 
     void impl_tostring(lua_State* L) {
-      uint64_t u = check_uint64(L, 1);
+      uint64_t self = check_uint64(L, 1);
       std::ostringstream out;
-      out << u;
+      out << self;
       luaX_push(L, out.str());
     }
 
     void impl_tonumber(lua_State* L) {
-      uint64_t u = check_uint64(L, 1);
-      luaX_push(L, u);
+      uint64_t self = check_uint64(L, 1);
+      luaX_push(L, self);
     }
 
     void impl_word(lua_State* L) {
