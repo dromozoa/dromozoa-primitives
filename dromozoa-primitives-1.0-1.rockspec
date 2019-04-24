@@ -1,5 +1,5 @@
 package = "dromozoa-primitives"
-version = "1.3-1"
+version = "1.0-1"
 source = {
   url = "https://github.com/dromozoa/dromozoa-primitives/archive/v1.0.tar.gz";
   file = "dromozoa-primitives-1.0.tar.gz";
