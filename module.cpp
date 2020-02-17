@@ -1,4 +1,4 @@
-// Copyright (C) 2019 Tomoyuki Fujimori <moyu@dromozoa.com>
+// Copyright (C) 2019,2020 Tomoyuki Fujimori <moyu@dromozoa.com>
 //
 // This file is part of dromozoa-primitives.
 //
@@ -18,9 +18,11 @@
 #include "common.hpp"
 
 namespace dromozoa {
+  void initialize_time(lua_State*);
   void initialize_uint64(lua_State*);
 
   void initialize(lua_State* L) {
+    initialize_time(L);
     initialize_uint64(L);
   }
 }
