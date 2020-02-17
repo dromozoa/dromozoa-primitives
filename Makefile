@@ -1,4 +1,4 @@
-# Copyright (C) 2019 Tomoyuki Fujimori <moyu@dromozoa.com>
+# Copyright (C) 2019,2020 Tomoyuki Fujimori <moyu@dromozoa.com>
 #
 # This file is part of dromozoa-primitives.
 #
@@ -22,6 +22,7 @@ LDLIBS += -ldl
 
 OBJS = \
 	module.o \
+	time.o \
 	uint64.o
 TARGET = primitives.so
 
